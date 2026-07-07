@@ -1,6 +1,3 @@
-print("*" * 80)
-print("Calculator".center(80))
-print("*" * 80)
 
 def factorial(fact_num):
     flag_num = 1
