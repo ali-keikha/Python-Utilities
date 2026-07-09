@@ -81,9 +81,7 @@ def main():
         if result == None:
             break
     
-        f_number = result
-
-    print(f_number)
+        print(f"your answer is : {result}")
     
 if __name__ == "__main__":
     main()

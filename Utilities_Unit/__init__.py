@@ -26,7 +26,7 @@ while True:
     elif user_choose == 4:
         BMI_Calculator.main()
     elif user_choose == 5:
-        File_Organizer.main
+        File_Organizer.main()
     else:
         break
 
