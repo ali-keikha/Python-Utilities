@@ -3,6 +3,7 @@ import Calculator
 import Unit_Conveter
 import BMI_Calculator
 import File_Organizer
+import word_alphabet_counter
 
 print("-" * 80)
 print("Utilities".center(70))
@@ -15,7 +16,8 @@ while True:
                             "3) Unit Converter\n"
                             "4) Bmi calculator\n"
                             "5) File Organizer\n"
-                            "6) Exit\n"))
+                            "6) Word and Alphabet Counter\n"
+                            "7) Exit\n"))
     
     if user_choose == 1:
         PasswordGenerator.main()
@@ -27,6 +29,8 @@ while True:
         BMI_Calculator.main()
     elif user_choose == 5:
         File_Organizer.main()
+    elif user_choose == 6:
+        word_alphabet_counter.main()
     else:
         break
 
