@@ -15,6 +15,7 @@ I created this project to improve my Python skills by building practical tools i
 - ⚖️ BMI Calculator
 - 📂 File Organizer
 - 🔤 Word And Letter Counter
+- 🔎 File Duplicate
 
 ## Project Structure
 
