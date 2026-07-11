@@ -32,7 +32,9 @@ python-utilities/
     ├── password_generator.py
     ├── unit_converter.py
     ├── bmi.py
-    └── file_organizer.py
+    ├── file_organizer.py
+    ├── word_alphabet_counter
+    └── File_Duplicate
 ```
 
 ## Getting Started
@@ -58,7 +60,7 @@ bash
 python main.py
 ```
 
-More utilities will be added as I continue learning Python.
+This project will be updated as I continue learning Python.
 
 ## Technologies
 
