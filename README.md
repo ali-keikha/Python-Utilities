@@ -14,6 +14,7 @@ I created this project to improve my Python skills by building practical tools i
   - Temperature
 - ⚖️ BMI Calculator
 - 📂 File Organizer
+- 🔤 Word And Letter Counter
 
 ## Project Structure
 
