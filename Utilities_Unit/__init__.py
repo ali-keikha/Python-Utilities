@@ -6,12 +6,16 @@ import File_Organizer
 import word_alphabet_counter
 import File_Duplicate
 
-print("-" * 80)
-print("Utilities".center(70))
-print("-" * 80)
 
 while True:
-    user_choose = int(input("Choose option\n"
+    
+    while True:
+        
+        try:
+            print("-" * 80)
+            print("Utilities".center(70))
+            print("-" * 80)
+            user_choice = int(input("Choose option\n"
                             "1) Password Generate\n"
                             "2) Calculator\n"
                             "3) Unit Converter\n"
@@ -20,20 +24,28 @@ while True:
                             "6) Word and Alphabet Counter\n"
                             "7) File Duplicate\n"
                             "8) Exit\n"))
+            
+            if user_choice not in range(1,9):
+                print("Enter Number between 1-8")
+            else:
+                break
+        
+        except ValueError :
+            print("Enter Number")
     
-    if user_choose == 1:
+    if user_choice == 1:
         PasswordGenerator.main()
-    elif user_choose == 2:
+    elif user_choice == 2:
         Calculator.main()
-    elif user_choose == 3:
+    elif user_choice == 3:
         Unit_Conveter.main()
-    elif user_choose == 4:
+    elif user_choice == 4:
         BMI_Calculator.main()
-    elif user_choose == 5:
+    elif user_choice == 5:
         File_Organizer.main()
-    elif user_choose == 6:
+    elif user_choice == 6:
         word_alphabet_counter.main()
-    elif user_choose == 7:
+    elif user_choice == 7:
         File_Duplicate.main()
     else:
         break
