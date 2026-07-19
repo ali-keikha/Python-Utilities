@@ -1,10 +1,19 @@
+def get_number():
+    while True:
+        try:
+            number = float(input("Enter Number:\n"))
+            break
+        except ValueError:
+            print("Enter Number")
+    
+    return number
 
 def factorial(fact_num):
-    flag_num = 1
+    result = 1
     for i in range(1, fact_num + 1):
-        flag_num = flag_num * i
+        result *= i
 
-    return flag_num
+    return result
 
 
 def set_number(first_number : float):
@@ -21,21 +30,21 @@ def set_number(first_number : float):
                             "7) Factorial\n"
                             "8) Modulo\n"
                             "9) Exit calculator\n"))
-            if operator not in range(1,10):
-                raise ValueError("choose number between 1-9")
+            if not 1 <= operator <= 9:
+                print("Please enter a number between 1 and 9")
+
+            else:
+                break
             
-            break
-            
-        except ValueError as e:
-            print(e)
+        except ValueError:
+            print("Please enter a valid number")
         
     if operator == 9:
-
         return None
     
     if operator in (1, 2, 3, 4, 5, 8):
 
-        number = float(input("Enter number\n"))
+        number = get_number()
 
         if operator == 1:
             result = (first_number + number)
@@ -44,10 +53,12 @@ def set_number(first_number : float):
         elif operator == 3:
             result = (first_number * number)
         elif operator == 4:
+            
             if number == 0:
                 print("Cannot divide by zero")
                 return first_number
             result = (first_number / number)
+        
         elif operator == 5:
             result = (first_number ** number)
         elif operator == 8:
@@ -67,20 +78,28 @@ def set_number(first_number : float):
             if first_number < 0:
                 print("Negative numbers do not have a factorial")
                 return first_number
-            result = factorial(int(first_number))
+            
+            elif first_number.is_integer():
+                result = factorial(int(first_number))
         
+            else:
+                print("Factorial is only defined for integers")
+                return first_number
     return result
 
 
 def main():
 
-    f_number = float(input("Enter Number :\n"))
+    f_number = get_number()
 
     while True:
         result = set_number(f_number)
-        if result == None:
+        
+        if result is None:
             break
     
+        f_number = result
+
         print(f"your answer is : {result}")
     
 if __name__ == "__main__":
