@@ -38,7 +38,7 @@ def main():
             try:
                 user_choose = int(input("Select Option:\n"
                                     "1) BMI Calculate\n"
-                                    "2) Exit"))
+                                    "2) Exit\n"))
                 
                 if not 1 <= user_choose <= 2:
                     print("Please enter a number between 1 and 2")
