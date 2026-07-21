@@ -18,10 +18,21 @@ def main():
 
     while True:
 
-        user_option = int(input("Select option:\n"
+        while True:
+            try:
+                user_option = int(input("Select option:\n"
                                 "1) Word Counte in sentence\n"
                                 "2) Alphabet Counter in sentence\n" \
                                 "3) Exit\n"))
+                
+                if not 1 <= user_option <= 3:
+                    print("Please Enter number between 1 and 3")
+                    continue
+
+                break
+
+            except ValueError:
+                print("Please enter valid number")
 
         if user_option == 1:
 

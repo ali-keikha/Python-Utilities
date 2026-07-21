@@ -29,8 +29,12 @@ def Generator(password_len):
 
 def main():
 
-    pass_length = int(input("Choose your password length: \n"))
+    try:
+        pass_length = int(input("Choose your password length: \n"))
 
+    except ValueError:
+        print("Please enter valid number")
+    
     password = Generator(pass_length)
 
     print(f"Your Password Generate!:\n {password}")
