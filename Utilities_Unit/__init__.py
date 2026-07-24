@@ -5,7 +5,7 @@ import BMI_Calculator
 import File_Organizer
 import word_alphabet_counter
 import File_Duplicate
-
+import Age_calculator
 
 while True:
     
@@ -23,10 +23,11 @@ while True:
                             "5) File Organizer\n"
                             "6) Word and Alphabet Counter\n"
                             "7) File Duplicate\n"
-                            "8) Exit\n"))
+                            "8) Age Calculator\n"
+                            "9) Exit\n"))
             
-            if user_choice not in range(1,9):
-                print("Enter Number between 1-8")
+            if user_choice not in range(1,10):
+                print("Enter Number between 1-9")
             else:
                 break
         
@@ -47,6 +48,8 @@ while True:
         word_alphabet_counter.main()
     elif user_choice == 7:
         File_Duplicate.main()
+    elif user_choice == 8:
+        Age_calculator.main()
     else:
         break
 
